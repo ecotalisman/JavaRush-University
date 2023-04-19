@@ -19,6 +19,8 @@ Requirements:
 2. Потрібно реалізувати метод replace(String, String, int, int) згідно з умовою.
 */
 
+import java.util.Arrays;
+
 public class Solution {
     public static void main(String[] args) {
         String string = "Навчатися, навчатися і ще раз навчатися! ";
@@ -29,11 +31,72 @@ public class Solution {
 
     public static StringBuilder addTo(String string, String[] strings) {
         //напишіть тут ваш код
-        return null;
+        StringBuilder builder = new StringBuilder();
+        builder.append(string);
+
+        for (int i = 0; i < strings.length; i++) {
+            builder.append(strings[i]);
+        }
+//        for (String str : strings) {
+//            builder.append(str);
+//        }
+        return builder;
     }
 
     public static StringBuilder replace(String string, String str, int start, int end) {
         //напишіть тут ваш код
-        return null;
+        StringBuilder builder = new StringBuilder();
+        builder.append(string);
+        builder.replace(start, end, str);
+        return builder;
     }
 }
+
+/*
+
+Цей код містить два методи, addTo(String string, String[] strings) та replace(String string, String str, int start,
+int end), які реалізують операції додавання та заміни частини рядка відповідно, використовуючи StringBuilder.
+
+Метод addTo(String string, String[] strings) працює наступним чином:
+1) Створює об'єкт StringBuilder builder.
+2) Додає до builder вміст рядка string за допомогою метода append(string).
+3) Використовує цикл для додавання елементу масиву strings[] до builder за допомогою метода append().
+4) Повертає builder у вигляді об'єкта StringBuilder.
+
+
+Метод replace(String string, String str, int start, int end) працює наступним чином:
+1) Створює об'єкт StringBuilder builder.
+2)Додає до builder вміст рядка string за допомогою метода append(string).
+3) Використовує метод replace(start, end, str) для заміни частини рядка в builder, яка починається з індексу start і
+закінчується індексом end, на рядок str.
+4) Повертає builder у вигляді об'єкта StringBuilder.
+
+Цей код демонструє, як використовувати StringBuilder для роботи з рядками, зокрема додавання та заміни частини рядка.
+
+*************************************************************************************************************************
+
+Використання builder.append(Arrays.toString(strings)) додасть усі рядки з масиву strings в одному рядку, але з
+додатковими символами, такими як [, ] та ,. Метод Arrays.toString() перетворює масив на рядок у вигляді
+"[елемент1, елемент2, елемент3]".
+
+Ось приклад різниці між використанням Arrays.toString(strings) та циклу для додавання рядків:
+
+
+String[] strings = new String[]{"Під ", "лежачий ", "камінь ", "вода ", "не ", "тече"};
+
+StringBuilder builder1 = new StringBuilder();
+builder1.append(Arrays.toString(strings));
+System.out.println(builder1.toString()); // Виведе: "[Під , лежачий , камінь , вода , не , тече]"
+
+StringBuilder builder2 = new StringBuilder();
+for (String str : strings) {
+    builder2.append(str);
+}
+System.out.println(builder2.toString()); // Виведе: "Під лежачий камінь вода не тече"
+
+
+Як видно з прикладу, коли використовується Arrays.toString(strings), в результаті будуть зайві символи.
+Тому для правильного додавання рядків з масиву до StringBuilder краще використовувати цикл, як у коді.
+
+
+*/
