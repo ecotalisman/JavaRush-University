@@ -4,6 +4,13 @@ import java.util.Arrays;
 
 /* 
 Виводимо двовимірні масиви
+Реалізуй метод main(String[]), який виводить масиви strings і ints у консоль за допомогою методу Arrays.deepToString(Object[][]).
+
+Requirements:
+1. У класі Solution має бути публічна статична змінна strings типу String[][].
+2. У класі Solution має бути публічна статична змінна ints типу int[][].
+3. У методі main(String[]) виведи в консоль массив strings за допомогою методу Arrays.deepToString(Object[][]).
+4. У методі main(String[]) виведи в консоль массив ints за допомогою методу Arrays.deepToString(Object[][]).
 */
 
 public class Solution {
@@ -13,5 +20,7 @@ public class Solution {
 
     public static void main(String[] args) {
         //напишіть тут ваш код
+        System.out.println(Arrays.deepToString(strings));
+        System.out.println(Arrays.deepToString(ints));
     }
 }
