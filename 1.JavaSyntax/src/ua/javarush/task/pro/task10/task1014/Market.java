@@ -13,6 +13,8 @@ public class Market {
     }
 
     public static void makePurchases(boolean hasEggs) {
+//        was condition:
+//        if (hasEggs) {
         if (hasEggs) {
             System.out.println("Куплено 10 батонів");
         } else {
