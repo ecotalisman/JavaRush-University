@@ -22,26 +22,38 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = null;
-        BufferedReader bufferedReader = null;
-        try {
-            scanner = new Scanner(System.in);
-            String fileName = scanner.nextLine();
-            bufferedReader = Files.newBufferedReader(Path.of(fileName));
+        // Write code here:
+        try (Scanner scanner = new Scanner(System.in);
+             BufferedReader bufferedReader = Files.newBufferedReader(Path.of(scanner.nextLine()))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (IOException e) {
             System.out.println("Something went wrong : " + e);
-        } finally {
-            if (scanner != null) {
-                scanner.close();
-            }
-            if (bufferedReader != null) {
-                bufferedReader.close();
-            }
         }
+
+        // It was a condition:
+//        Scanner scanner = null;
+//        BufferedReader bufferedReader = null;
+//        try {
+//            scanner = new Scanner(System.in);
+//            String fileName = scanner.nextLine();
+//            bufferedReader = Files.newBufferedReader(Path.of(fileName));
+//            String line;
+//            while ((line = bufferedReader.readLine()) != null) {
+//                System.out.println(line);
+//            }
+//        } catch (IOException e) {
+//            System.out.println("Something went wrong : " + e);
+//        } finally {
+//            if (scanner != null) {
+//                scanner.close();
+//            }
+//            if (bufferedReader != null) {
+//                bufferedReader.close();
+//            }
+//        }
     }
 }
 
