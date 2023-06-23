@@ -16,6 +16,10 @@ Requirements:
 
 public class Solution {
 
+    // It was a condition:
+//    static Calendar birthDate = new GregorianCalendar();
+
+    // Change a code:
     static Calendar birthDate = new GregorianCalendar(1984, 4,5);
 
     public static void main(String[] args) {
