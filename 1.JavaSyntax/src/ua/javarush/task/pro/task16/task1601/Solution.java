@@ -16,6 +16,10 @@ Requirements:
 
 public class Solution {
 
+    // It was a condition:
+//    static Date birthDate = new Date();
+
+    // Change a code:
     static Date birthDate = new Date(125, 5,5);
 
     public static void main(String[] args) {
