@@ -24,11 +24,6 @@ Requirements:
 3. У пакеті factory повинні бути класи JavaRush, KotlinCourse та DotNetCourse, що реалізовані відповідно до умови.
 */
 
-import ua.javarush.task.jdk13.task41.task4107.factory.DotNetCourse;
-import ua.javarush.task.jdk13.task41.task4107.factory.JavaRush;
-import ua.javarush.task.jdk13.task41.task4107.factory.KotlinCourse;
-import ua.javarush.task.jdk13.task41.task4107.factory.ProgrammingCourse;
-
 public class Solution {
 
     private static ProgrammingCourse course;
