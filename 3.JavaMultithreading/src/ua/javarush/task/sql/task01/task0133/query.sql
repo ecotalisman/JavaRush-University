@@ -1,0 +1,10 @@
+/*
+Оператори OFFSET та LIMIT
+Вибрати з таблиці ip2country колонки country_code, ip_from, ip_to (у вказаному порядку). Під час вибору
+пропусти перші 33 рядки. Вибрати потрібно лише 12 рядків. Потрібно використовувати: LIMIT та OFFSET.
+
+Requirements:
+1. Запит має бути реалізований згідно з умовою.
+*/
+-- Write your code here:
+SELECT country_code, ip_from, ip_to FROM ip2country LIMIT 12 OFFSET 33;
