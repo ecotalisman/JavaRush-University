@@ -7,4 +7,4 @@ Requirements:
 1. Запит має бути реалізований згідно з умовою.
 */
 -- Write your code here:
-SELECT IF(5 > 3, 1, 0)
+SELECT IF(5 > 3, 1, 0);
