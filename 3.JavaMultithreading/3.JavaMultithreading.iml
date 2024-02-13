@@ -14,5 +14,6 @@
     <orderEntry type="library" name="apache.commons.lang3" level="project" />
     <orderEntry type="library" name="apache.commons.collections4" level="project" />
     <orderEntry type="library" name="antlr-2.7.7" level="project" />
+    <orderEntry type="library" name="zaxxer.HikariCP" level="project" />
   </component>
 </module>
